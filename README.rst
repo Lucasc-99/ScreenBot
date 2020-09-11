@@ -1,7 +1,5 @@
-.. image:: https://github.com/Lucasc-99/RoboSitter/blob/master/128.png
-
 ===============
-RoboSitter
+RoboSitter .. image:: https://github.com/Lucasc-99/RoboSitter/blob/master/128.png
 ===============
 
 
