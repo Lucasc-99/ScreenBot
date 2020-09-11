@@ -2,7 +2,7 @@
 RoboSitter
 ===============
 
-.. image:: path/https://github.com/Lucasc-99/RoboSitter/blob/master/128.png
+.. image:: https://github.com/Lucasc-99/RoboSitter/blob/master/128.png
 
 A robotic babysitter for anyone who spends too much time on their computer.
 
