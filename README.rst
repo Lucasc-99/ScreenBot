@@ -2,7 +2,21 @@
 RoboSitter
 ===============
 
+![RoboSitter icon]
+
+A robotic babysitter for anyone who spends too much time on their computer.
+
+Do you have bad posture and dry eyes from spending hours a day at your computer? Try this python script
+
+
+
 NOTE: developed and tested on MAC
+
+------------
+Usage
+------------
+
+TODO: write this section
 
 ------------
 Dependencies
@@ -17,7 +31,7 @@ Dependencies
 ------------
 Features
 ------------
--Screen-time tracking using facial recognition. Encourages user to take 5-10 minute breaks after every 50-60 minutes of screentime.
+-Screen-time tracking using facial recognition. Encourages user to take 5 to 10 minute breaks after every 50 to 60 minutes of screentime.
 
 -Sends user random reminders to fix their posture
 
@@ -25,3 +39,8 @@ Features
 TODO
 ------------
 Finish implementing screentime tracking algorithm
+
+------------
+References
+------------
+
