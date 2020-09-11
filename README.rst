@@ -2,15 +2,15 @@
 RoboSitter
 ===============
 
-.. image:: https://github.com/Lucasc-99/RoboSitter/blob/master/128.png
 
 A robotic babysitter for anyone who spends too much time on their computer.
 
-Do you have bad posture and dry eyes from spending hours a day at your computer? Try this python script
+Do you have bad posture and dry eyes from spending hours a day at your computer? 
+
+This python script will help you track your screen time, remind you to take breaks, and even tell you to fix your posture
 
 
-
-NOTE: developed and tested on MAC
+NOTE: developed and tested for MAC
 
 ------------
 Usage
@@ -44,3 +44,4 @@ Finish implementing screentime tracking algorithm
 References
 ------------
 
+Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
