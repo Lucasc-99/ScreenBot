@@ -38,7 +38,9 @@ Features
 ------------
 TODO
 ------------
-Finish implementing screentime tracking algorithm
+Finish implementing screen time tracking algorithm
+
+Implement screen time analytics
 
 ------------
 References
