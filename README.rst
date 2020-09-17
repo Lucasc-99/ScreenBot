@@ -40,6 +40,8 @@ TODO
 ------------
 Finish implementing screen time tracking algorithm
 
+Implement user profiles using face encodings
+
 Implement screen time analytics
 
 ------------
