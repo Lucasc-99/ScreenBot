@@ -4,43 +4,65 @@ import time
 import pync
 import random
 
-"""Constants for track_screen_time"""
+"""CONSTANTS"""
 MODEL_NAME = "cnn"  # Convolutional Neural Network
 VIDEO_PORT = 0  # Port for webcam
-
-"""Constants for posture reminder thread"""
-POSTURE_LOWER_BOUND = (60 * 60 * 60)  # Lower bound for timing of random notifications (1 hour)
-POSTURE_UPPER_BOUND = (60 * 60 * 60) * 3  # Upper bound for timing of random notifications (3 hours)
+BREAK_TIME = 60 * 2  # Length of breaks for user
+IMAGE_DOWNSCALE = 0.2  # Proportion of captured image to run through CNN
+SCREEN_LOWER_BOUND = 60 * 50  # Lower bound screen-time before break is required in (seconds)
+SCREEN_UPPER_BOUND = 50 * 60  # Upper bound screen-time before break is required in (seconds)
+SCREEN_CHECK_INTERVAL = 10  # Seconds to wait in-between screen checks
+SCREEN_MISS_TOLERANCE = 3  # Tolerance for screen recognition misses, change this to be the same length as a break
+POSTURE_LOWER_BOUND = (60 * 60 * 60)  # Lower bound for timing of random notifications (seconds)
+POSTURE_UPPER_BOUND = (60 * 60 * 60) * 3  # Upper bound for timing of random notifications (seconds)
 
 
 def track_screen_time():
     """Thread to track user screen time using facial recognition
-        TODO : Implement algorithm for session tracking
 
         Algorithm:
             Check if user is at screen
-            if user is not at screen for 5 minutes, this is a break, reset timer
-            else if user has been at screen for rand(50,60) minutes, as them to take a break
-            if they come back after 5 minutess, begin counting the hour again
-            else continue counting screen time and report it every hour
+            if user has been at screen for SCREEN_LOWER_BOUND to SCREEN_UPPER_BOUND minutes
+            ensure that user is not at screen for BREAK_TIME minutes straight afterwards
+            reset break time if they
     """
     vid = cv2.VideoCapture(VIDEO_PORT)
-    time.sleep(5)
+    time.sleep(5)  # Not necessary
     start_time = time.perf_counter()
-    rest_time = random.randint(60 * 50, 60 * 60)
+    rest_time = random.randint(SCREEN_LOWER_BOUND, SCREEN_UPPER_BOUND) / 60.0
+    require_break = False
+    t_break_issued = 0  # Time that break was issued at
+    screen_misses = 0
     while True:
         i, snapshot = vid.read()
         snapshot = cv2.cvtColor(snapshot, cv2.COLOR_RGB2BGR)
-        snapshot = cv2.resize(snapshot, None, fx=0.20, fy=0.20, interpolation=cv2.INTER_AREA)  # Scale image down 1/5
+        snapshot = cv2.resize(snapshot, None, fx=IMAGE_DOWNSCALE, fy=IMAGE_DOWNSCALE, interpolation=cv2.INTER_AREA)
         entities = face_recognition.face_locations(snapshot, model=MODEL_NAME)  # Run image through cnn
+        curr_time = (time.perf_counter() - start_time) / 60.0
         if entities:
-            curr_time = (time.perf_counter() - start_time) / 60.0  # minutes that user has been at screen for
-            msg = f"Your screen time this session is {curr_time:.1f} minutes"
-            pync.notify(msg, appIcon="128.png", title="RoboSitter Says:")
+            if require_break:
+                msg = "You should be taking a break! Break timer reset"
+                pync.notify(msg, appIcon="128.png", title="RoboSitter Says:")
+                t_break_issued = time.perf_counter()
+            elif curr_time >= rest_time:
+                msg = f"You have been here {curr_time:.1f} minutes, take a break"
+                t_break_issued = time.perf_counter()
+                require_break = True
+                pync.notify(msg, appIcon="128.png", title="RoboSitter Says:")
+        elif require_break:
+            if (time.perf_counter() - t_break_issued) >= BREAK_TIME:  # BREAK_TIME minutes have elapsed
+                require_break = False
+                start_time = time.perf_counter()
+                t_break_issued = 0
+                pync.notify("You have completed your break!", appIcon="128.png", title="RoboSitter Says:")
         else:
-            start_time = time.clock()
-            pync.notify("Where did u go?", appIcon="128.png", title="RoboSitter Says:")
-        time.sleep(5)
+            if screen_misses > SCREEN_MISS_TOLERANCE:
+                start_time = time.perf_counter()
+                pync.notify("No one is home", appIcon="128.png", title="RoboSitter Says:")
+                screen_misses = 0
+            else:
+                screen_misses += 1
+        time.sleep(SCREEN_CHECK_INTERVAL)
 
 
 def posture_reminders():

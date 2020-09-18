@@ -14,7 +14,7 @@ def start_screen_track():
 
 def stop_screen_track():
     """Starter function for screen time tracker"""
-    if threads['posture']:
+    if 'posture' in threads:
         threads['posture'].stop()
         del threads['posture']
 
@@ -28,7 +28,7 @@ def start_posture_reminders():
 
 def stop_posture_reminders():
     """Stopper function for posture reminders thread"""
-    if threads['posture']:
+    if 'posture' in threads:
         threads['posture'].stop()
         del threads['posture']
 
@@ -36,8 +36,8 @@ def stop_posture_reminders():
 def stop_all_threads():
     """Function for stopping all RoboSitter related threads"""
     for i, j in enumerate(threads):
-        threads[i].stop()
-        del threads[i]
+        threads[j].stop()
+        del threads[j]
 
 
 if __name__ == '__main__':
