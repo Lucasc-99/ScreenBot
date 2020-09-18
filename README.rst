@@ -7,10 +7,10 @@ A robotic babysitter for anyone who spends too much time on their computer.
 
 Do you have bad posture and dry eyes from spending hours a day at your computer? 
 
-This python script will help you track your screen time, remind you to take breaks, and even tell you to fix your posture
+This python script will help you track your screen time, (rudely) remind you to take breaks, and even ask you to fix your posture
 
 
-NOTE: developed and tested for MAC
+NOTE: currently being developed and tested for MAC
 
 ------------
 Usage
@@ -38,10 +38,14 @@ Features
 ------------
 TODO
 ------------
-Finish implementing screentime tracking algorithm
+Finish implementing screen time tracking algorithm
+
+Implement user profiles using face encodings
+
+Implement screen time analytics
 
 ------------
 References
 ------------
 
-Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+Icon made by "https://www.flaticon.com/authors/freepik"
