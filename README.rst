@@ -41,6 +41,8 @@ TODO
 
 Implement user profiles using face encodings
 
+Implement better visualization for screen-time tracking
+
 
 ------------
 References
