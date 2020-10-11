@@ -41,6 +41,8 @@ TODO
 
 Implement user profiles using face encodings
 
+Implement a better and less hacky algorithm for deciding when a user should take a break
+
 Implement better visualization for screen-time tracking
 
 
