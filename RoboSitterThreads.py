@@ -18,14 +18,7 @@ POSTURE_UPPER_BOUND = (60 * 60 * 60) * 3  # Upper bound for timing of random not
 
 
 def track_screen_time():
-    """Thread to track user screen time using facial recognition
-
-        Algorithm:
-            Check if user is at screen
-            if user has been at screen for SCREEN_LOWER_BOUND to SCREEN_UPPER_BOUND minutes
-            ensure that user is not at screen for BREAK_TIME minutes straight afterwards
-            reset break time if they
-    """
+    """Thread to track user screen time using facial recognition"""
     vid = cv2.VideoCapture(VIDEO_PORT)
     time.sleep(5)  # Not necessary
     start_time = time.perf_counter()
