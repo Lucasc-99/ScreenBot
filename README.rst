@@ -3,14 +3,14 @@ RoboSitter
 ===============
 
 
-A robotic babysitter for anyone who spends too much time on their computer.
+A program anyone who spends too much time on their computer.
 
 Do you have bad posture and dry eyes from spending hours a day at your computer? 
 
-This python script will help you track your screen time, (rudely) remind you to take breaks, and even ask you to fix your posture
+This python script will help you track your screen time, remind you to take breaks, and even ask you to fix your posture
 
 
-NOTE: currently being developed and tested for MAC
+NOTE: developed and tested for MAC
 
 ------------
 Usage
@@ -38,11 +38,11 @@ Features
 ------------
 TODO
 ------------
-Finish implementing screen time tracking algorithm
 
 Implement user profiles using face encodings
 
-Implement screen time analytics
+Implement better visualization for screen-time tracking
+
 
 ------------
 References
