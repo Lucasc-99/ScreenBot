@@ -3,7 +3,7 @@ RoboSitter
 ===============
 
 
-A robotic babysitter for anyone who spends too much time on their computer.
+A program anyone who spends too much time on their computer.
 
 Do you have bad posture and dry eyes from spending hours a day at your computer? 
 
