@@ -36,17 +36,6 @@ Features
 -Sends user random reminders to fix their posture
 
 ------------
-TODO
-------------
-
-Implement user profiles using face encodings
-
-Implement a better and less hacky algorithm for deciding when a user should take a break
-
-Implement visualization for screen-time tracking (graphs charts etc.)
-
-
-------------
 References
 ------------
 
