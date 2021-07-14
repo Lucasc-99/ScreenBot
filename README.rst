@@ -10,13 +10,12 @@ Do you have bad posture and dry eyes from spending hours a day at your computer?
 This python script will help you track your screen time, remind you to take breaks, and even ask you to fix your posture
 
 
-NOTE: developed and tested for MAC
+NOTE: MAC version only
 
 ------------
 Usage
 ------------
 
-TODO: write this section
 
 ------------
 Dependencies
