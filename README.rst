@@ -16,7 +16,9 @@ NOTE: MAC version only
 Usage
 ------------
 
-
+```
+python RoboSitterMain.py
+```
 ------------
 Dependencies
 ------------
