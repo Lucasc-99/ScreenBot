@@ -1,5 +1,5 @@
 ===============
-RoboSitter
+ScreenBOT
 ===============
 
 
@@ -10,7 +10,15 @@ Do you have bad posture and dry eyes from spending hours a day at your computer?
 This python script will help you track your screen time, remind you to take breaks, and even ask you to fix your posture
 
 
-NOTE: MAC version only
+------------
+Features
+------------
+-Screen-time tracking using facial recognition. Encourages user to take 5 to 10 minute breaks after set intervals of screen time.
+
+-Can occasionally remind the user to fix their posture
+
+
+NOTE: MAC only
 
 ------------
 Usage
@@ -32,12 +40,6 @@ Dependencies
 
 -pync --> pip install pync  # Used to send MAC terminal notifications
 
-------------
-Features
-------------
--Screen-time tracking using facial recognition. Encourages user to take 5 to 10 minute breaks after every 50 to 60 minutes of screentime.
-
--Sends user random reminders to fix their posture
 
 ------------
 References

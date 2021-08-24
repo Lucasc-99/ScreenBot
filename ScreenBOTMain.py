@@ -1,13 +1,13 @@
 import threading
 import pync
-import RoboSitterThreads
+import ScreenBOTThreads
 
-threads = dict()  # Dictionary used to keep track of all RoboSitter related threads
+threads = dict()  # Dictionary used to keep track of all ScreenBOT related threads
 
 
 def start_screen_track():
     """Starter function for screen time tracker"""
-    s_thread = threading.Thread(target=RoboSitterThreads.track_screen_time())
+    s_thread = threading.Thread(target=ScreenBOTThreads.track_screen_time())
     threads['screentime'] = s_thread
     s_thread.start()
 
@@ -21,7 +21,7 @@ def stop_screen_track():  # NOT TESTED
 
 def start_posture_reminders():
     """Starter function for posture reminders thread"""
-    p_thread = threading.Thread(target=RoboSitterThreads.posture_reminders())
+    p_thread = threading.Thread(target=ScreenBOTThreads.posture_reminders())
     threads['posture'] = p_thread
     p_thread.start()
 
@@ -34,13 +34,13 @@ def stop_posture_reminders():  # NOT TESTED
 
 
 def stop_all_threads():  # NOT TESTED
-    """Function for stopping all RoboSitter related threads"""
+    """Function for stopping all ScreenBOT related threads"""
     for i, j in enumerate(threads):
         threads[j].stop()
         del threads[j]
 
 
 if __name__ == '__main__':
-    pync.notify("Welcome, I am RoboSitter", appIcon="128.png", title="RoboSitter Says :")
+    pync.notify("Welcome, I am ScreenBOT", appIcon="128.png", title="ScreenBOT Says :")
     start_screen_track()
     start_posture_reminders()
