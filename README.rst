@@ -25,7 +25,7 @@ Usage
 ------------
 
 ```
-python RoboSitterMain.py
+python ScreenBOTMain.py
 ```
 
 
