@@ -1,7 +1,6 @@
-===============
+*****
 ScreenBot
-===============
-
+*****
 
 A program for anyone who spends too much time on their computer.
 
@@ -9,7 +8,8 @@ Do you have bad posture and dry eyes from spending hours a day at your computer?
 
 This python script will help you track your screen time, remind you to take breaks, and even ask you to fix your posture
 
-
+.. image:: 128.png
+  :width: 400
 ------------
 Features
 ------------
