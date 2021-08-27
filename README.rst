@@ -24,7 +24,7 @@ NOTE: MAC only
 Usage
 ------------
 
-``$ python ScreenBOTMain.py
+```$ python ScreenBOTMain.py
 ``
 
 
