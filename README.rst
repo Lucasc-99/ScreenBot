@@ -1,5 +1,8 @@
 *****
 ScreenBot
+.. class:: center
+.. image:: 128.png
+  :width: 400
 *****
 
 A program for anyone who spends too much time on their computer.
@@ -10,6 +13,7 @@ This python script will help you track your screen time, remind you to take brea
 
 .. image:: 128.png
   :width: 400
+  
 ------------
 Features
 ------------
