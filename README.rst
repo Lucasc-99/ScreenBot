@@ -1,6 +1,5 @@
 *****
 ScreenBot
-.. class:: center
 *****
 
 A program for anyone who spends too much time on their computer.
