@@ -1,6 +1,5 @@
 *****
 ScreenBot
-.. class:: center
 .. image:: 128.png
   :width: 400
 *****
