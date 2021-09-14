@@ -3,7 +3,8 @@ ScreenBot
 *****
 
 .. image:: 128.png
-  :width: 400
+  :height: 400
+  :width: 200
 
 A program for anyone who spends too much time on their computer.
 
