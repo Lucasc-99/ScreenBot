@@ -8,8 +8,6 @@ ScreenBot
 
 A program for anyone who spends too much time on their computer.
 
-This python script will help you track your screen time, remind you to take breaks, and even ask you to fix your posture
-
   
 ------------
 Features
